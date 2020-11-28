@@ -1,0 +1,16 @@
+﻿
+@page
+@using MusicWebSite.Components
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Zing Mp3</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">Bài hát được yêu thích nhất tháng 11 </a>.</p>
+</div>
+
+@(await Html.RenderComponentAsync<MusicList>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
